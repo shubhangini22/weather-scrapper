@@ -1,8 +1,10 @@
 <?php
 if($_GET['city']){
      
-  echo file_get_contents("https://api.openweathermap.org/data/2.5/weather?".$_GET['city']."id=524901&appid=56c7996d30c08df75c56a709ec680b92");
+  echo file_get_contents("https://api.openweathermap.org/data/2.5/weather?".$_GET['city']."uk&appid=56c7996d30c08df75c56a709ec680b92");
 
+    $weatherArray=json_decode($urlContents,true);
+    print_r($weatherArray);
     //exploding the string using explode function to get the reuired content
 
 }
